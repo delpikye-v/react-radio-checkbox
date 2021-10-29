@@ -1,10 +1,10 @@
 {
   "name": "react-radio-checkbox-z",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React UI Check/Radio [RadioGroup, Checkbox(s)]",
   "main": "build/index.min.js",
   "module": "build/index.esm.js",
-  "browser": "build/index.esm.js",
+  "browser": "build/index.js",
   "files": [
     "build"
   ],
@@ -12,7 +12,6 @@
     "build": "npx rollup -c",
     "clean": "rimraf ./build",
     "commitmsg": "npx commitlint -e $GIT_PARAMS",
-    "gc": "commit",
     "lint": "npx eslint --ext .js,.jsx .",
     "prepare": "npm run build",
     "semantic-release": "npx semantic-release",
@@ -25,9 +24,8 @@
     "type": "git",
     "url": "https://github.com/delpikye-v/react-radio-checkbox.git"
   },
-  "publishConfig": {
-    "access": "public"
-  },
+  "homepage": "https://github.com/delpikye-v/react-radio-checkbox#readme",
+  "author": "Delpi.Kye",
   "keywords": [
     "react",
     "react-radio",
@@ -39,12 +37,10 @@
     "custom-checkbox",
     "mr-simple"
   ],
-  "author": "Delpi.Kye",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/delpikye-v/react-radio-checkbox/issues"
   },
-  "homepage": "https://github.com/delpikye-v/react-radio-checkbox#readme",
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
@@ -103,8 +99,8 @@
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
-    "react": ">=16.8.2",
-    "react-dom": ">=16.8.2"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "dependencies": {
     "styled-components": "^5.3.3"

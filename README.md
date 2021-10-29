@@ -52,7 +52,7 @@ Wrap you content in this component:
         // displayBox={true} // display like checkbox
         // vertical={true} // display vertical
         // selectColor="red"  
-        // unselectColor="yellow"
+        // unSelectColor="yellow"
         // tickColor="black"
       />
 ```
@@ -145,4 +145,4 @@ npm run start
 ```
 
 ### License
-ISC
+MIT
