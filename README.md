@@ -51,9 +51,9 @@ Wrap you content in this component:
         // checkBox={true} // input="checkbox"
         // displayBox={true} // display like checkbox
         // vertical={true} // display vertical
-        // selectColor="red"  
-        // unSelectColor="yellow"
-        // tickColor="black"
+        // selectColor="red"  // color when selected
+        // unSelectColor="yellow" // color when no selected
+        // tickColor="black" // color of tick when selected (theme tick || tickFill)
       />
 ```
 

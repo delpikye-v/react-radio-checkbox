@@ -1,8 +1,8 @@
 {
   "name": "react-radio-checkbox-z",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React UI Check/Radio [RadioGroup, Checkbox(s)]",
-  "main": "build/index.min.js",
+  "main": "build/index.js",
   "module": "build/index.esm.js",
   "browser": "build/index.js",
   "files": [
@@ -11,13 +11,10 @@
   "scripts": {
     "build": "npx rollup -c",
     "clean": "rimraf ./build",
-    "commitmsg": "npx commitlint -e $GIT_PARAMS",
     "lint": "npx eslint --ext .js,.jsx .",
     "prepare": "npm run build",
-    "semantic-release": "npx semantic-release",
     "start": "npm run build -- -w",
     "test": "npx jest --coverage",
-    "travis-deploy-once": "npx travis-deploy-once",
     "is-build-es5": "npx es-check es5 './build/**/*.!(esm).js'"
   },
   "repository": {
@@ -34,8 +31,7 @@
     "react-radio-group",
     "react-checkbox",
     "custom-radio",
-    "custom-checkbox",
-    "mr-simple"
+    "custom-checkbox"
   ],
   "license": "MIT",
   "bugs": {
@@ -48,10 +44,6 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
     "@babel/runtime": "^7.15.4",
-    "@commitlint/cli": "^9.0.1",
-    "@commitlint/config-angular": "^9.0.1",
-    "@commitlint/prompt": "^9.0.1",
-    "@commitlint/prompt-cli": "^9.0.1",
     "@rollup/plugin-babel": "^5.0.2",
     "@rollup/plugin-commonjs": "^12.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
@@ -61,9 +53,6 @@
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "babel-preset-minify": "^0.6.0-alpha.9",
-    "bufferutil": "^4.0.2",
-    "canvas": "^2.6.1",
-    "css-loader": "^3.5.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "es-check": "^5.1.2",
@@ -73,8 +62,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "fibers": "^5.0.0",
-    "husky": "^4.2.5",
     "jest": "^26.0.1",
     "jest-transform-css": "^2.0.0",
     "marked": "^1.1.0",
@@ -85,17 +72,7 @@
     "rollup-plugin-filesize": "^9.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^3.1.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "semantic-release": "^17.0.8",
-    "source-map-loader": "^1.0.0",
-    "style-loader": "^1.2.1",
-    "travis-deploy-once": "^5.0.11",
-    "typescript": "^3.9.3",
-    "utf-8-validate": "^5.0.3",
-    "webpack": "^4.43.0",
-    "webpack-build-notifier": "^2.0.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "rollup-plugin-terser": "^7.0.2"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
