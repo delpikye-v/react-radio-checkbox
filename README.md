@@ -33,27 +33,30 @@ Wrap you content in this component:
         { label: 'label1', value:'label1' },
         'label2',
         'label3',
-        ...
-        //   { label, value, disabled, className: 'itemClass', labelClassName: 'labelClass' },
+        // ...more,
+        // { label, value, disabled, className: 'itemClass', labelClassName: 'labelClass' },
     ])
 
     // don't check duplicate value in options, so please pass unique value
     <RadioCheckBox options={options}
         value={value} // array or string
         onChange={setValue} // event
-        theme="tick"  // default || tick || tickFill || fill || in
+        theme="tick"  // see props
 
-        // more
+        // more => 
         // groupName="item-group-template" // default random unique
-        // height="30px"
+        // height="30"          // min-height option
+        // boxSize="16"         // box-size 16 x 16 
         // className={className}
-        // disabled={true} // disabled all
-        // checkBox={true} // input="checkbox"
-        // displayBox={true} // display like checkbox
-        // vertical={true} // display vertical
-        // selectColor="red"  // color when selected
-        // unSelectColor="yellow" // color when no selected
-        // tickColor="black" // color of tick when selected (theme tick || tickFill)
+        // disabled={true}      // disabled all
+        // checkBox={true}      // input="checkbox"
+        // displayBox={true}    // display like checkbox
+        // vertical={true}      // display vertical
+        // selectColor="any"    // color when selected
+        // unSelectColor="any"  // color when no selected
+        // tickColor="any"      // only theme (type `tick/x`)
+
+        // (Box size is affected by: `box-sizing: border-box`)
       />
 ```
 
@@ -106,11 +109,18 @@ Display vertical `true`. Defaut `false`
 
 
 #### theme (`String`)
-`default` || `tick` || `tickFill` || `fill` || `in`
+```js 
+    // default (nothing) of html
+    in: [
+        'fill', 'in', 'out', 
+        'tick', 'tick-fill', 'tick-fill-in', // tickFill: pre version.
+        'x', 'x-fill', 'x-fill-in'
+    ]
+```
 
 
 #### selectColor (`String`)
-color when checked. Default <span style="color: #4169E1">#4169E1</span>
+color when checked. Default <span style="color: #4169E1">[#4169E1]</span>
 
 
 #### unSelectColor (`String`)
@@ -118,14 +128,16 @@ color when unchecked. Default <span style="color: #cbd1d8;">[#cbd1d8]</span>
 
 
 #### tickColor (`String`)
-Use when `theme` = `tickFill` || `tick`
+Use when `theme` = `tick..` || `x..`
 
 `Color of tick when check.`
-<small>see demo</small>
 
 
 #### height
-min-height of line-options. `px, %, vh`. (default: `24px`)
+min-height of line-options. `px`. (default: `24px`)
+
+#### boxSize
+size of check. (default: `16px`)
 
 #### className
 The className added to group.
