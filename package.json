@@ -1,6 +1,6 @@
 {
   "name": "react-radio-checkbox-z",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React UI Check/Radio [RadioGroup, Checkbox(s)]",
   "main": "build/index.js",
   "module": "build/index.esm.js",
