@@ -1,7 +1,7 @@
 {
   "name": "react-radio-checkbox-z",
-  "version": "1.0.4",
-  "description": "React UI Check/Radio [RadioGroup, Checkbox(s)]",
+  "version": "1.0.5",
+  "description": "React UI Check/Radio [RadioGroup, Checkbox(s)] (BEST-CUSTOMIZE ALL)",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "browser": "build/index.js",
@@ -25,11 +25,16 @@
   "author": "Delpi.Kye",
   "keywords": [
     "react",
+    "react-component",
     "react-radio",
+    "react-radio-group",
+    "react-radio-checkbox",
+    "react-checkbox",
+    "react-checkbox-radio",
+    "radio-checkbox",
+    "checkbox-radio",
     "ui-radio",
     "ui-checkbox",
-    "react-radio-group",
-    "react-checkbox",
     "custom-radio",
     "custom-checkbox"
   ],

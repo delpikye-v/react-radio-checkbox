@@ -9,21 +9,20 @@
 </div>
 
 ---
+<span>You can customize <b>icon</b>, <b>theme</b> or <b>color</b> for <b>Checkbox/Radio</b></span>
 
+<b><small>React / <a href="https://www.npmjs.com/package/vue-radio-checkbox-z">Vue</a> / <a href="https://www.npmjs.com/package/svelte-radio-checkbox-z">Svelte</a></small></b>
 
 ### Usage
 Install the package 
 ```js
 npm install --save react-radio-checkbox-z
-
 ```
 
 Import the module in the place you want to use:
 ```js
 import RadioCheckBox from "react-radio-checkbox-z";
 ```
-
-Wrap you content in this component:
 
 #### Snippet
 ```js
@@ -54,8 +53,11 @@ Wrap you content in this component:
         // vertical={true}      // display vertical
         // selectColor="any"    // color when selected
         // unSelectColor="any"  // color when no selected
+        // hoverColor=any       // color when hover (default like selectColor)
         // tickColor="any"      // only theme (type `tick/x`)
-        // hoverColor="any"     // default like color when selected
+        // tabFocusColor        // keypress tab (shawdow box: #000)
+        // checkedIcon          // custom icon
+
         // (Box size is affected by: `box-sizing: border-box`)
       />
 ```
@@ -87,11 +89,11 @@ list data like. `[Object, String, ...]`
     {
         label: 'Display', value: 'value', disabled: false,  // disabled option
         className: 'itemClass', labelClassName: 'labelClass'
-        jsx // in case you want to change the label to a complex element
+        jsx // in case you want to change the label to a complex element,
+        checkedIcon // it is url or exact icon (SEE LIVE EXAMPLE)
     },
     ...,
     'value' // => make option { label: value, value: value }
-
 
     // ex: [ { value: '1', disabled: true, jsx: <span>xyzmrer....</span> }... ]
 ]
@@ -117,7 +119,7 @@ Display vertical `true`. Defaut `false`
     // default (nothing) of html
     in: [
         'fill', 'in', 'out',
-        'tick', 'tick-fill', 'tick-fill-in', // tickFill: pre version.
+        'tick', 'tick-fill', 'tick-fill-in',
         'x', 'x-fill', 'x-fill-in'
     ]
 ```
@@ -138,23 +140,36 @@ color when hover. Default using (selectColor)
 
 
 #### tickColor (`String`)
-
-Use when `theme` = `tick..` || `x..`
+Use when `theme` type = `tick..` || `x..`
 
 `Color of tick when check.`
 
 
-#### height
-min-height of line-options. 24. (default: `24px`)
+#### tabFocusColor (`String`)
+box shadow color when focus by tab. (`#000`)             
 
-#### boxSize
-size of check. 16. (default: `16px`)
+#### height (`number` or `number_px`)
+min-height of line-options. (default: `24px`)
+
+#### boxSize (`number` or `number_px`)
+size of check. (default: `16px`)
 
 #### className
 The className added to group.
 
-#### customize icon check
+#### checkedIcon
+
+customize checked icon (see live example)
+
+
+<br />
+
+###### customize icon check (another solution)
+`You should refrain from using this method.`
+
+<small>
 With theme: `x...` || `tick...` <br />You can override css to see custom tick.
+</small>
 
 ```css
 /* set your className(.itemClass) for selector unique */
@@ -170,6 +185,8 @@ With theme: `x...` || `tick...` <br />You can override css to see custom tick.
 The style added to group.
 
 ### Example
+<a href="https://codesandbox.io/s/react-radio-checkbox-z-51sg3">LIVE EXAMPLE</a>
+
 A working example can be found in the `example` directory.
 
 ```js
